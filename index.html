@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>French Onion Soup</title>
+    <script>
+        function readIngredients() {
+            const ingredients = document.getElementById('ingredients');
+            const utterance = new SpeechSynthesisUtterance(ingredients.innerText);
+            window.speechSynthesis.speak(utterance);
+        }
+        
+        function readInstructions() {
+            const instructions = document.getElementById('instructions');
+            const utterance = new SpeechSynthesisUtterance(instructions.innerText);
+            window.speechSynthesis.speak(utterance);
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>French Onion Soup</h1>
+    </header>
+    <img src="image/image-1.jpg" alt="French Onion Soup">
+    <h2>Ingredients</h2>
+    <ul id="ingredients">
+        <li>6 large yellow onions, thinly sliced</li>
+        <li>4 tablespoons unsalted butter</li>
+        <li>2 cloves garlic, minced</li>
+        <li>1 cup dry white wine</li>
+        <li>8 cups beef broth</li>
+        <li>2 bay leaves</li>
+        <li>1/2 teaspoon dried thyme</li>
+        <li>Salt and pepper, to taste</li>
+        <li>1 baguette, sliced</li>
+        <li>2 cups grated Gruyère cheese</li>
+    </ul>
+    <button onclick="readIngredients()">Read Ingredients</button>
+    <h2>Instructions</h2>
+    <ol id="instructions">
+        <li>Melt butter in a large pot over medium heat. Add onions and cook until caramelized, stirring occasionally, about 25-30 minutes.</li>
+        <li>Add garlic and cook for 1-2 minutes, until fragrant.</li>
+        <li>Stir in wine and bring to a boil. Reduce heat and simmer for 10 minutes, until the wine has reduced.</li>
+        <li>Add beef broth, bay leaves, thyme, salt, and pepper. Bring to a boil, then reduce heat and simmer for 30 minutes.</li>
+        <li>Preheat oven to 350°F (175°C). Arrange baguette slices on a baking sheet and toast for 5 minutes, until crisp.</li>
+        <li>Set oven to broil. Ladle soup into oven-safe bowls, top with toasted baguette slices, and sprinkle with Gruyère cheese.</li>
+        <li>Place bowls on a baking sheet and broil until cheese is melted and bubbly, about 2-4 minutes. Serve hot.</li>
+    </ol>
+    <button onclick="readInstructions()">Read Instructions</button>
+</body>
+</html>
